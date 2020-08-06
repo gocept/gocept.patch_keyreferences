@@ -1,5 +1,5 @@
 ============================
-gocept.compare_keyreferences
+gocept.patch_keyreferences
 ============================
 
 This package fixes the comparison between keyreferences of
@@ -26,6 +26,6 @@ To use this package include it in the zcml of you application::
 
     <configure xmlns="http://namespaces.zope.org/zope">
 
-        <include package="gocept.compare_keyreferences" />
+        <include package="gocept.patch_keyreferences" />
 
     </configure>

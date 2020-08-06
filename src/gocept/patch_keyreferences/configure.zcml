@@ -9,7 +9,7 @@
         description="This works around issue in https://github.com/zopefoundation/zope.keyreference/pull/6"
         class="zope.keyreference.persistent.KeyReferenceToPersistent"
         original="_get_cmp_keys"
-        replacement=".compare._get_cmp_keys"
+        replacement=".patch._get_cmp_keys"
         />
 
 </configure>

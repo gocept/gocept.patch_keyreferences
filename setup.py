@@ -7,7 +7,7 @@ def read(filename):
         return f.read()
 
 
-name = "gocept.compare_keyreferences"
+name = "gocept.patch_keyreferences"
 version = '0.1.dev0'
 
 
@@ -16,7 +16,7 @@ setup(
     version=version,
     author="gocept gmbh & co. kg",
     author_email="mail@gocept.com",
-    url='https://github.com/gocept/gocept.compare_keyreferences',
+    url='https://github.com/gocept/gocept.patch_keyreferences',
     description="Fix for the comparison of security wrapped keyreferences.",
     long_description=(
         read('README.rst')
