@@ -20,7 +20,8 @@ setup(
     description="Fix for the comparison of security wrapped keyreferences.",
     long_description=(
         read('README.rst')
-        + "\n\n" + read('CHANGES.rst')),
+        + "\n\n" + read('CHANGES.rst')
+    ),
     license="MIT",
     keywords="zodb zope reference fix",
     classifiers=(
@@ -34,6 +35,7 @@ setup(
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "License :: OSI Approved :: Zope Public License",
@@ -53,6 +55,7 @@ setup(
     ],
     extras_require={
         'test': [
+            'zope.app.catalog[test]',
         ]
     },
 )
