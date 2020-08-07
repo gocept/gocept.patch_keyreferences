@@ -43,7 +43,3 @@ def test_suite():
     )
     suite.layer = PatchedAppCatalogLayer
     return suite
-
-
-if __name__ == '__main__':
-    unittest.main(defaultTest='test_suite')
