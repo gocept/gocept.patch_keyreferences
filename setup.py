@@ -8,7 +8,7 @@ def read(filename):
 
 
 name = "gocept.patch_keyreferences"
-version = '0.1'
+version = '0.2.dev0'
 
 
 setup(
