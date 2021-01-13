@@ -1,6 +1,7 @@
 from ZODB.ConflictResolution import PersistentReference
 import zope.security.proxy
 
+
 # This was is the workaround from from
 # https://github.com/zopefoundation/zope.keyreference/pull/6
 def _get_cmp_keys(self, other):

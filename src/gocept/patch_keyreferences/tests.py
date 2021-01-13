@@ -3,7 +3,6 @@
 
 """
 import doctest
-import unittest
 import re
 
 from zope.testing import renormalizing
@@ -21,7 +20,6 @@ def http(query_str, *args, **kwargs):
     if not isinstance(query_str, bytes):
         query_str = query_str.encode("utf-8")
     return _http(wsgi_app, query_str, *args, **kwargs)
-
 
 
 def test_suite():
