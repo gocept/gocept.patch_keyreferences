@@ -6,7 +6,7 @@ Changes
 0.2 (unreleased)
 ================
 
-- Nothing changed yet.
+- Use GitHub actions as CI.
 
 
 0.1 (2020-08-07)
