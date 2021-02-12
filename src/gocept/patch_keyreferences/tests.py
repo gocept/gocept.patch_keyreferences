@@ -1,15 +1,10 @@
 """Functional tests for zope.app.catalog
-
-
 """
+from .testing import PatchedAppCatalogLayer
+from zope.app.wsgi.testlayer import http as _http
+from zope.testing import renormalizing
 import doctest
 import re
-
-from zope.testing import renormalizing
-
-from .testing import PatchedAppCatalogLayer
-
-from zope.app.wsgi.testlayer import http as _http
 
 
 def http(query_str, *args, **kwargs):
