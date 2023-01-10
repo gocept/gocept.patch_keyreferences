@@ -1,4 +1,3 @@
-from setuptools import find_packages
 from setuptools import setup
 
 
@@ -9,7 +8,7 @@ def read(filename):
 
 
 name = "gocept.patch_keyreferences"
-version = '0.2.dev0'
+version = '1.0.dev0'
 
 
 setup(
@@ -25,7 +24,7 @@ setup(
     ),
     license="MIT",
     keywords="zodb zope reference fix",
-    classifiers=(
+    classifiers=[
         "Topic :: Software Development",
         "Topic :: Database",
         "Framework :: ZODB",
@@ -33,22 +32,17 @@ setup(
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "License :: OSI Approved",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-    ),
-    zip_safe=False,
-    packages=find_packages('src'),
-    include_package_data=True,
-    package_dir={'': 'src'},
-    namespace_packages=['gocept'],
+    ],
     install_requires=[
         'ZODB',
         'collective.monkeypatcher',
