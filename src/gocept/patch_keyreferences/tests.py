@@ -2,9 +2,7 @@
 """
 from .testing import PatchedAppCatalogLayer
 from zope.app.wsgi.testlayer import http as _http
-from zope.testing import renormalizing
 import doctest
-import re
 
 
 def http(query_str, *args, **kwargs):
@@ -18,21 +16,14 @@ def http(query_str, *args, **kwargs):
 
 
 def test_suite():
-    checker = renormalizing.RENormalizing((
-        (re.compile("HTTP/1.0"), "HTTP/1.1"),
-        (re.compile(r"u('[^']*')"), r"\1"),
-    ))
-
     suite = doctest.DocFileSuite(
         'regression.rst',
         globs={
             'http': http,
             'getRootFolder': PatchedAppCatalogLayer.getRootFolder,
         },
-        checker=checker,
         optionflags=(doctest.ELLIPSIS
-                     | doctest.NORMALIZE_WHITESPACE
-                     | renormalizing.IGNORE_EXCEPTION_MODULE_IN_PYTHON2),
+                     | doctest.NORMALIZE_WHITESPACE),
     )
     suite.layer = PatchedAppCatalogLayer
     return suite
